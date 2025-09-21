@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Wordle Guesser</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <p>This simple Wordle guesser can guess any wordle word</p>
+  <form id="word">
+    <div class="word">
+      <div class="letter" id="l1">
+      <span></span>
+      <div class="act">
+        <input type="radio" name="r1" value="right"></input><input type="radio" value="wrong" name="r1"></input><input type="radio" value="none" name="r1"></input>
+      </div>
+    </div>
+    <div class="letter" id="l2">
+      <span></span>
+      <div class="act">
+        <input type="radio" name="r2" value="right"></input><input type="radio" value="wrong" name="r2"></input><input type="radio" value="none" name="r2"></input>
+      </div>
+    </div>
+    <div class="letter" id="l3">
+      <span></span>
+      <div class="act">
+        <input type="radio" name="r3" value="right"></input><input type="radio" value="wrong" name="r3"></input><input type="radio" value="none" name="r3"></input>
+      </div>
+    </div>
+    <div class="letter" id="l4">
+      <span></span>
+      <div class="act">
+        <input type="radio" name="r4" value="right"></input><input type="radio" value="wrong" name="r4"></input><input type="radio" value="none" name="r4"></input>
+      </div>
+    </div>
+    <div class="letter" id="l5">
+      <span></span>
+      <div class="act">
+        <input type="radio" name="r5" value="right"></input><input type="radio" value="wrong" name="r5"></input><input type="radio" value="none" name="r5"></input>
+      </div>
+    </div>
+    <button type="submit">Submit Guess</button>
+    <button id="reset">Reset Page</button>
+  </form>
+  <script src="words.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

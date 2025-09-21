@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+}
+
+.word, .letter{
+  display: flex;
+  gap: .5rem
+}
+
+.letter{
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 2.5em;
+
+  & > span {
+    font-size: xx-large;
+  }
+}
+
+.act{
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="radio"] {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  isolation: isolate;
+  color: white;
+  font-weight: 900;
+  &[value="right"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 5px solid green;
+    accent-color: green;
+    background-color: green;
+  }
+  &[value="right"]:checked::after{
+    content: "x"
+  }
+  &[value="wrong"]::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 5px solid yellow;
+    accent-color: yellow;
+    background-color: yellow;
+    color: black;
+  }
+  &[value="wrong"]:checked::after{
+    content: "x"
+  }
+  &[value="none"]::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 5px solid gray;
+    accent-color: gray;
+    background-color: gray;
+  }
+  &[value="none"]:checked::after{
+    content: "x"
+  }
+}
