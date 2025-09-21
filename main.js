@@ -27,7 +27,6 @@ document.getElementById("word").addEventListener("submit", function(event) {
   }
 
   let requiredLetters = []
-  let invalidLetters = []
   availableWords = availableWords.filter(word => {
     for (let i = 0; i < 5; i++) {
       const letter = currentWord[i];
@@ -44,18 +43,12 @@ document.getElementById("word").addEventListener("submit", function(event) {
         }
       } else if (result === "none") {
         if (word.includes(letter)) {
-          invalidLetters.push(letter)
           return false;
         }
       }
     }
     for (let i = 0; i < requiredLetters.length; i++){
       if (!word.split("").includes(requiredLetters[i])){
-        return false;
-      }
-    }
-    for (let i = 0; i < invalidLetters.length; i++){
-      if (word.split("").includes(invalidLetters[i])){
         return false;
       }
     }
